@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BT COFFEE</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">☕ BT COFFEE</div>
+
+      <!-- Hamburger icon -->
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Freshly Brewed Coffee Delivered to You</h1>
+      <p>Wake up and smell the coffee — premium blends available now.</p>
+      <a href="#products" class="btn">Shop Now</a>
+    </section>
+
+    <section id="menu" class="products">
+      <h2>Our Favorites</h2>
+      <div class="product-grid">
+        <div class="card">
+          <img src="espresso.jpg" alt="Espresso" />
+          <h3>Espresso</h3>
+          <p>Strong and bold. Your morning hero.</p>
+          <button class="open-modal" data-name="Espresso" data-price="₦1500">
+            View Details
+          </button>
+        </div>
+        <div class="card">
+          <img src="latte.jpg" alt="Latte" />
+          <h3>Latte</h3>
+          <p>Silky smooth with a touch of love.</p>
+          <button class="open-modal" data-name="latte" data-price="₦1800">
+            View Details
+          </button>
+        </div>
+        <div class="card">
+          <img src="capuchino.jpg" alt="Cappuccino" />
+          <h3>Cappuccino</h3>
+          <p>A creamy classic with a frothy top.</p>
+          <button class="open-modal" data-name="capuchino" data-price="₦1700">
+            View Details
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Coffee Haven. All rights reserved.</p>
+    </footer>
+    <section id="about" class="about">
+      <h2>About Coffee Haven</h2>
+      <p>
+        At <strong>Coffee Haven</strong>, we believe coffee is more than just a
+        drink — it's a daily ritual, a moment of peace, and a source of
+        inspiration. <br /><br />
+        We source premium beans from sustainable farms around the world and
+        roast them with love right here. Whether you're grabbing a quick
+        espresso or sipping a latte with friends, every cup tells a story.
+      </p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>📞 Phone: <a href="tel:09160993708">09160993708</a></p>
+      <p>
+        📧 Email:
+        <a href="mailto:okunolababatola06@gmail.com"
+          >okunolababatola06@gmail.com</a
+        >
+      </p>
+      <p>
+        📷 Instagram:
+        <a href="https://www.instagram.com/_young_bt_/?hl=en" target="_blank"
+          >@_young_bt_</a
+        >
+      </p>
+    </section>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const nav = document.querySelector("nav");
+
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+    <!-- Product Popup Modal -->
+    <div id="product-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="modal-title">Product Name</h3>
+        <p id="modal-price">₦0</p>
+        <p>Select payment method:</p>
+        <button class="pay-btn">💳 Pay with Card</button>
+        <button class="pay-btn">🏦 Bank Transfer</button>
+      </div>
+    </div>
+    <script>
+      const modal = document.getElementById("product-modal");
+      const modalTitle = document.getElementById("modal-title");
+      const modalPrice = document.getElementById("modal-price");
+      const closeBtn = document.querySelector(".close");
+
+      const openButtons = document.querySelectorAll(".open-modal");
+
+      openButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const name = button.getAttribute("data-name");
+          const price = button.getAttribute("data-price");
+
+          modalTitle.textContent = name;
+          modalPrice.textContent = `Price: ${price}`;
+          modal.style.display = "block";
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
