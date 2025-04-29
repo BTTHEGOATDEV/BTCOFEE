@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BT COFFEE</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>BT COFFEE - Artisanal Coffee Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header>
-      <div class="logo">☕ BT COFFEE</div>
+      <div class="logo"><i class="fas fa-mug-hot"></i> BT COFFEE</div>
 
       <!-- Hamburger icon -->
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
 
       <nav>
         <ul class="nav-links" id="nav-links">
@@ -23,120 +26,114 @@
       </nav>
     </header>
 
-    <section class="hero">
-      <h1>Freshly Brewed Coffee Delivered to You</h1>
-      <p>Wake up and smell the coffee — premium blends available now.</p>
-      <a href="#products" class="btn">Shop Now</a>
+    <section class="hero" id="top">
+      <h1>Artisanal Coffee Crafted with Passion</h1>
+      <p>Discover our premium selection of specialty coffees, roasted to perfection and brewed with care.</p>
+      <a href="#menu" class="btn">Explore Our Menu</a>
     </section>
 
     <section id="menu" class="products">
-      <h2>Our Favorites</h2>
+      <h2 class="section-title">Our Signature Blends</h2>
       <div class="product-grid">
         <div class="card">
-          <img src="espresso.jpg" alt="Espresso" />
+          <img src="https://source.unsplash.com/600x400/?espresso" alt="Rich espresso coffee">
           <h3>Espresso</h3>
-          <p>Strong and bold. Your morning hero.</p>
+          <p>A concentrated form of coffee served in small, strong shots with a rich flavor and creamy surface.</p>
           <button class="open-modal" data-name="Espresso" data-price="₦1500">
-            View Details
+            Order Now
           </button>
         </div>
         <div class="card">
-          <img src="latte.jpg" alt="Latte" />
+          <img src="https://source.unsplash.com/600x400/?latte" alt="Creamy latte coffee">
           <h3>Latte</h3>
-          <p>Silky smooth with a touch of love.</p>
-          <button class="open-modal" data-name="latte" data-price="₦1800">
-            View Details
+          <p>Perfectly balanced espresso with steamed milk and a light layer of foam for a smooth experience.</p>
+          <button class="open-modal" data-name="Latte" data-price="₦1800">
+            Order Now
           </button>
         </div>
         <div class="card">
-          <img src="capuchino.jpg" alt="Cappuccino" />
+          <img src="https://source.unsplash.com/600x400/?cappuccino" alt="Frothy cappuccino coffee">
           <h3>Cappuccino</h3>
-          <p>A creamy classic with a frothy top.</p>
-          <button class="open-modal" data-name="capuchino" data-price="₦1700">
-            View Details
+          <p>Espresso combined with steamed milk foam, creating a luxurious layered coffee experience.</p>
+          <button class="open-modal" data-name="Cappuccino" data-price="₦1700">
+            Order Now
           </button>
         </div>
       </div>
     </section>
 
-    <footer>
-      <p>&copy; 2025 Coffee Haven. All rights reserved.</p>
-    </footer>
     <section id="about" class="about">
-      <h2>About Coffee Haven</h2>
+      <h2 class="section-title">Our Coffee Story</h2>
       <p>
-        At <strong>Coffee Haven</strong>, we believe coffee is more than just a
-        drink — it's a daily ritual, a moment of peace, and a source of
-        inspiration. <br /><br />
-        We source premium beans from sustainable farms around the world and
-        roast them with love right here. Whether you're grabbing a quick
-        espresso or sipping a latte with friends, every cup tells a story.
+        At <strong>BT COFFEE</strong>, we're passionate about every step of the coffee journey. From sourcing the finest beans 
+        from sustainable farms to perfecting our roasting techniques, we dedicate ourselves to bringing you 
+        exceptional coffee experiences. <br><br>
+        Our baristas are trained in the art of coffee making, ensuring each cup is crafted with precision and care. 
+        Whether you're a coffee connoisseur or just beginning your coffee journey, we have something special for you.
       </p>
     </section>
 
     <section id="contact" class="contact">
-      <h2>Contact Us</h2>
-      <p>📞 Phone: <a href="tel:09160993708">09160993708</a></p>
-      <p>
-        📧 Email:
-        <a href="mailto:okunolababatola06@gmail.com"
-          >okunolababatola06@gmail.com</a
-        >
-      </p>
-      <p>
-        📷 Instagram:
-        <a href="https://www.instagram.com/_young_bt_/?hl=en" target="_blank"
-          >@_young_bt_</a
-        >
-      </p>
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-text">
+            <h3>Call Us</h3>
+            <a href="tel:09160993708">09160993708</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-text">
+            <h3>Email Us</h3>
+            <a href="mailto:okunolababatola06@gmail.com">okunolababatola06@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <div class="contact-text">
+            <h3>Follow Us</h3>
+            <a href="https://www.instagram.com/_young_bt_/?hl=en" target="_blank">@_young_bt_</a>
+          </div>
+        </div>
+      </div>
     </section>
-    <script>
-      const menuToggle = document.getElementById("menu-toggle");
-      const nav = document.querySelector("nav");
 
-      menuToggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-      });
-    </script>
+    <footer>
+      <div class="footer-content">
+        <div class="logo"><i class="fas fa-mug-hot"></i> BT COFFEE</div>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/_young_bt_/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p class="copyright">&copy; 2025 BT COFFEE. All rights reserved.</p>
+      </div>
+    </footer>
+
     <!-- Product Popup Modal -->
     <div id="product-modal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
         <h3 id="modal-title">Product Name</h3>
         <p id="modal-price">₦0</p>
-        <p>Select payment method:</p>
-        <button class="pay-btn">💳 Pay with Card</button>
-        <button class="pay-btn">🏦 Bank Transfer</button>
+        <p>Select your preferred payment method:</p>
+        <div class="payment-options">
+          <button class="pay-btn"><i class="fas fa-credit-card"></i> Pay with Card</button>
+          <button class="pay-btn"><i class="fas fa-university"></i> Bank Transfer</button>
+          <button class="pay-btn"><i class="fas fa-money-bill-wave"></i> Cash on Delivery</button>
+        </div>
       </div>
     </div>
-    <script>
-      const modal = document.getElementById("product-modal");
-      const modalTitle = document.getElementById("modal-title");
-      const modalPrice = document.getElementById("modal-price");
-      const closeBtn = document.querySelector(".close");
 
-      const openButtons = document.querySelectorAll(".open-modal");
-
-      openButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const name = button.getAttribute("data-name");
-          const price = button.getAttribute("data-price");
-
-          modalTitle.textContent = name;
-          modalPrice.textContent = `Price: ${price}`;
-          modal.style.display = "block";
-        });
-      });
-
-      closeBtn.addEventListener("click", () => {
-        modal.style.display = "none";
-      });
-
-      window.addEventListener("click", (e) => {
-        if (e.target === modal) {
-          modal.style.display = "none";
-        }
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
